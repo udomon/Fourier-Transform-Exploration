@@ -21,7 +21,7 @@
 <body>
   <div id="grid"></div>
 
-  <!-- load the file your Python writes (it writes "const PLOTS = ...;" into plots.json) -->
+  <!-- plots.json is written by the python file as "const PLOTS = ...;" -->
   <script src="plots.json"></script>
 
   <script>
@@ -74,7 +74,7 @@
           ctx.stroke();
         }
 
-        // draw centre of mass dot — use the keys produced by your Python: centreX / centreY
+        // draw centre of mass dot using centreX / centreY from the python file
         const cx = (p.centreX !== undefined) ? p.centreX : p.cx;
         const cy = (p.centreY !== undefined) ? p.centreY : p.cy;
         if (cx !== undefined && cy !== undefined) {

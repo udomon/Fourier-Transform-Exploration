@@ -380,7 +380,7 @@ class ImageWave(CompositeWave):
         arr = np.array(image) # make image into an array
         darkest_row = np.argmin(arr, axis=0).astype(float)
     
-        # Flip vertically — image rows go top-down, but amplitude goes bottom-up
+        # flip vertically since image rows go top to bottom but amplitude goes bottom to top
         return image.height - darkest_row
 
     def _normalise(self, wave):
